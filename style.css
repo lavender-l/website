@@ -57,23 +57,19 @@ main {
 .latest article {
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 1.5rem;
   border: 1px solid #ccc;
   padding: 1rem;
   margin-bottom: 1rem;
-  border-radius: 5px;
+  border-radius: 8px;
   background-color: #fafafa;
 }
 
 .latest article a {
   display: inline-block;
   margin-top: 0.5rem;
-  color: #6a4c93;
+  color: #fff;
   text-decoration: none;
-}
-
-.latest article a:hover {
-  text-decoration: underline;
 }
 
 /* Footer */
@@ -85,31 +81,57 @@ footer {
 }
 
 .latest img {
-  width: 100px;       /* set a consistent size */
-  height: auto;       /* keeps proportions */
-  border-radius: 5px; /* optional rounded corners */
+  width: 120px;       /* slightly bigger for better visuals */
+  height: auto;
+  border-radius: 5px;
+  flex-shrink: 0;     /* prevent image from shrinking */
 }
 
 .review-text {
   flex: 1; /* makes the text area take up the rest of the space */
 }
 
+.review-text h3 {
+  margin-bottom: 0.5rem;
+  color: #4b2e83;
+}
+
+.review-text p {
+  margin-bottom: 0.8rem;
+}
+
+/* Button style for Read Review */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #6a4c93;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #53367a;
+}
+
 
 /* 📱 Small screens (like iPhones) */
 @media (max-width: 600px) {
   .latest article {
-    flex-direction: column;   /* stack image on top of text */
-    align-items: center;      /* center image and text */
-    text-align: center;       /* center text for better look */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .latest img {
-    width: 70%;        /* make the image bigger on small screens */
-    max-width: 250px;  /* but don’t let it get too huge */
+    width: 70%;
+    max-width: 250px;
   }
 
   .review-text {
-    text-align: left;  /* keep text aligned if you prefer */
+    text-align: center;
     width: 100%;
   }
 }
