@@ -1,0 +1,115 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #fdfdfd;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #d9cce3;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;  /* allows wrapping if it doesn't fit in one line */
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #6a4c93;
+}
+
+/* Main content */
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.intro {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.latest article {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  background-color: #fafafa;
+}
+
+.latest article a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #6a4c93;
+  text-decoration: none;
+}
+
+.latest article a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #d9cce3;
+  margin-top: 2rem;
+}
+
+.latest img {
+  width: 100px;       /* set a consistent size */
+  height: auto;       /* keeps proportions */
+  border-radius: 5px; /* optional rounded corners */
+}
+
+.review-text {
+  flex: 1; /* makes the text area take up the rest of the space */
+}
+
+
+/* 📱 Small screens (like iPhones) */
+@media (max-width: 600px) {
+  .latest article {
+    flex-direction: column;   /* stack image on top of text */
+    align-items: center;      /* center image and text */
+    text-align: center;       /* center text for better look */
+  }
+
+  .latest img {
+    width: 70%;        /* make the image bigger on small screens */
+    max-width: 250px;  /* but don’t let it get too huge */
+  }
+
+  .review-text {
+    text-align: left;  /* keep text aligned if you prefer */
+    width: 100%;
+  }
+}
